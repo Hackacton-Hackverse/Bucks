@@ -1,4 +1,4 @@
-# Project Name
+# Bucks TodoList-App
 
 This project consists of a backend developed in Python using Flask, PyMySQL, and Flask-CORS, and a frontend developed with HTML, CSS, and vanilla JavaScript.
 
