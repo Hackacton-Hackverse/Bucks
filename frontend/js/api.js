@@ -202,7 +202,7 @@ function listExpiredTasks() {
                         <div class="main-content-frame-bottom-card-task-bottom-expire-date">`+task.due_date+`</div>
                         <div class="main-content-frame-bottom-card-task-bottom-buttons">
                             <img src="https://upload.wikimedia.org/wikipedia/commons/3/3b/Eo_circle_green_checkmark.svg" class="main-content-frame-bottom-card-task-bottom-button">
-                            <img src="https://upload.wikimedia.org/wikipedia/commons/8/8f/Flat_cross_icon.svg" class="main-content-frame-bottom-card-task-bottom-button">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/8/8f/Flat_cross_icon.svg" class="main-content-frame-bottom-card-task-bottom-button" onclick="clickDeleteTask(`+task.task_id+`, this)">
                         </div>
                     </div>
                 </div>`;
@@ -249,7 +249,7 @@ function listDoneTasks() {
                         <div class="main-content-frame-bottom-card-task-bottom-expire-date">`+task.due_date+`</div>
                         <div class="main-content-frame-bottom-card-task-bottom-buttons">
                             <img src="https://upload.wikimedia.org/wikipedia/commons/3/3b/Eo_circle_green_checkmark.svg" class="main-content-frame-bottom-card-task-bottom-button">
-                            <img src="https://upload.wikimedia.org/wikipedia/commons/8/8f/Flat_cross_icon.svg" class="main-content-frame-bottom-card-task-bottom-button">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/8/8f/Flat_cross_icon.svg" class="main-content-frame-bottom-card-task-bottom-button" onclick="clickDeleteTask(`+task.task_id+`, this)">
                         </div>
                     </div>
                 </div>`;
