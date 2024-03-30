@@ -10,7 +10,7 @@ CORS(app)
 
 # database indentifiers . . .
 DATABASE_USER_NAME = 'root'
-DATABASE_PASSWORD = 'your password'
+DATABASE_PASSWORD = '#Green0ps360Admin'
 
 # attemp to connect to database . . .
 try:
