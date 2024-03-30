@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Bucks todo app</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+        <link rel="stylesheet" href="../style/main-style.css">
+        <link rel="stylesheet" href="../style/popups-style.css">
+    </head>
+
+    <body>
+        <div class="main">
+            <div class="main-content-frame">
+                <div class="main-content-frame-top">
+                    <div class="main-content-frame-top-informations">
+                        <div class="main-content-frame-top-informations-welcome">
+                            Welcome back, Igor👋!
+                        </div>
+                        <div class="main-content-frame-top-informations-additionals">
+                            <img src="../assets/calendar-icon.svg" class="main-content-frame-top-informations-calendar">
+                            <div class="main-content-frame-top-informations-date">19 Mars 2024</div>
+                            <img src="../assets/profile-photo.jpg" class="main-content-frame-top-informations-photo">
+                        </div>
+                    </div>
+                    <div class="main-content-frame-top-informations-menu">
+                        <div class="main-content-frame-top-informations-menu-nav">
+                            <div class="main-content-frame-top-informations-menu-active">
+                                <i class="fa-solid fa-list-check fa-fw"></i>
+                                &nbsp;&nbsp;all tasks
+                            </div>
+                            <div class="main-content-frame-top-informations-menu-inactive">
+                                <i class="fa-solid fa-circle-xmark fa-fw"></i>
+                                deleted tasks
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="main-content-frame-bottom">
+                    <div class="main-content-frame-bottom-card" id="main-content-frame-bottom-card-1" onload="listToDoTasks()">
+                        <div class="main-content-frame-bottom-card-title">
+                            <div class="main-content-frame-bottom-card-title-text">To do (4)</div>
+                            <a class="main-content-frame-bottom-card-title-button"  onclick="openCreateTaskForm()">+ Add new task</a>
+                        </div>  
+                    </div>
+
+                    <div class="main-content-frame-bottom-card" id="main-content-frame-bottom-card-2">
+                        <div class="main-content-frame-bottom-card-title">
+                            <div class="main-content-frame-bottom-card-title-text">expired</div>
+                        </div>  
+                    </div>
+                    <div class="main-content-frame-bottom-card" id="main-content-frame-bottom-card-3">
+                        <div class="main-content-frame-bottom-card-title">
+                            <div class="main-content-frame-bottom-card-title-text">Done</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Create new task pop up form -->
+        <div class="create-new-task-form" id="new-task-form">
+            <form class="new-task-form-container" onsubmit="createTask(event)">
+                <div class="new-task-form-container-header">
+                    <h1>> Create a new task</h1>
+                    <div class="buttons">
+                        <button type="submit">create</button>
+                        <button type="button" onclick="closeCreateTaskForm()">cancel</button>
+                    </div>
+                </div>
+                <div class="info-field">
+                    <div><b>Title&nbsp;&nbsp;&nbsp;</b></div>
+                    <input type="text" placeholder="Enter the title of the new task" name="task-title" id="create-task-title" required>
+                </div>
+                <div class="info-field">  
+                    <div><b>Subtitle</b></div>
+                    <input type="text" placeholder="Enter task subtitle" name="task-subtitle" id="create-task-subtitle">
+                </div>
+                <div class="info-field">
+                    <div><b>Expire date</b></div>
+                    <input type="datetime-local" id="expiredate" name="expiredate" id="create-task-expire" required>
+                </div>
+                <div>
+                    <div class="info-field-comments-title"><b>Comments</b></div>
+                    <textarea class="info-field-comments-box" id="create-task-comments"></textarea>
+                </div>
+            </form>
+        </div>
+
+        <!-- Loading utils methods from javascript -->
+        <script src="../js/api.js"></script>
+        <script src="../js/utils.js"></script>
+        <script src="../js/popups.js"></script>
+    </body>
+</html>

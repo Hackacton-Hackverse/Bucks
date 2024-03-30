@@ -1,0 +1,324 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap');
+
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background-color: #222327;
+}
+
+.main{
+    padding:0%;
+    background-color: #222327;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.main-content-frame{
+    background-color: #2A2B2F;
+    width: 72%;
+    height: 100%;
+    padding: 32px;
+}
+
+.main-content-frame-top{
+    width: 100%;
+    height: 14%;
+}
+
+.main-content-frame-top-informations{
+    width: 100%;
+    height: 65%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.main-content-frame-top-informations-welcome{
+    font-family: 'Exo 2';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 100%;
+    color: #FFFFFF;
+}
+
+.main-content-frame-top-informations-additionals{
+    color: #222327;
+    display: flex;
+    align-items: center;
+}
+
+.main-content-frame-top-informations-calendar{
+    width: 22px;
+    height: 22px;
+    opacity: 0.5;
+}
+
+.main-content-frame-top-informations-date{
+    font-family: 'Exo 2';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 100%;
+    color: rgba(255, 255, 255, 0.5);
+    margin-left: 8px;
+}
+
+.main-content-frame-top-informations-photo{
+    width: 36px;
+    height: 36px;   
+    margin-left: 22px;
+    clip-path: circle();
+}
+
+.main-content-frame-top-informations-photo:hover{
+    cursor: pointer;
+}
+
+.main-content-frame-top-informations-menu{
+    position: relative;
+    margin-top: 25px;
+    height: 35%;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+    display: flex;
+    justify-content: space-between;
+}
+
+.main-content-frame-top-informations-menu-nav{
+    display: flex;
+}
+
+.main-content-frame-top-informations-menu-active{
+    font-family: 'Exo 2';
+    position: relative;
+    align-items: center;
+    bottom: -2px;
+    font-weight: 600;
+    font-size: 16px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid white;
+    color: #FFFFFF;
+}
+
+.main-content-frame-top-informations-menu-inactive{
+    font-family: 'Exo 2';
+    position: relative;
+    bottom: -2px;
+    font-weight: 600;
+    font-size: 16px;
+    padding-bottom: 10px;
+    color: rgba(255, 255, 255, 0.5);
+    margin-left: 20px;
+    align-items: center;
+}
+
+.main-content-frame-top-informations-menu-inactive:hover{
+    cursor: pointer;
+}
+
+.main-content-frame-top-informations-menu-icon-inactive{
+    position: relative;
+    align-items: center;
+    bottom: -2px;
+    width: 18px;
+    height: 18px;
+}
+
+.main-content-frame-top-informations-menu-icon{
+    filter: brightness(0) invert();
+    position: relative;
+    align-items: center;
+    bottom: -2px;
+    width: 18px;
+    height: 18px;
+}
+
+.main-content-frame-top-informations-menu-bts{
+    background: #4B69FF;
+    border-radius: 19px;
+    text-align: center;
+    font-family: 'Exo 2';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 100%;
+    padding: 5px;
+    color: #FFFFFF;
+}
+
+.main-content-frame-bottom{
+    width: 100%;
+    height: 82vh;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.main-content-frame-bottom-card{
+    width: 32%;
+    background: #24262C;
+    border-radius: 12px;
+    overflow: auto;
+    scrollbar-width: thin;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    transition: opacity 0.3s ease;
+}
+ 
+.main-content-frame-bottom-card-show-scrollbar {
+    scrollbar-width: thin;
+    scrollbar-color: auto auto;
+    scrollbar-width: auto;
+    -ms-overflow-style: auto;
+}
+
+.main-content-frame-bottom-card-title{
+    width: 100%;
+    background: #24262C;
+    border-radius: 12px;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.main-content-frame-bottom-card-title-text{
+    font-family: 'Exo 2';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 100%;
+    color: rgba(255, 255, 255, 0.5);
+    margin: 16px;
+}
+
+.main-content-frame-bottom-card-title-button{
+    font-family: 'Exo 2';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 100%;
+    color: white;
+    margin: 16px;
+    border-radius: 3px;
+    padding: 5px;
+    border: solid 1px rgba(255, 255, 255, 0.5);
+    border-style: dashed;
+}
+
+.main-content-frame-bottom-card-title-button:hover {
+    font-family: 'Exo 2';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 100%;
+    color: black;
+    background-color: white;
+    border: solid 1px black;
+    border-style: dashed;
+    cursor: pointer;
+}
+
+.main-content-frame-bottom-card-task{
+    background: #292B31;
+    border-radius: 12px;
+    margin: 16px;
+    margin-top: 0px;
+    padding: 20px;
+}
+
+.main-content-frame-bottom-card-task-title{
+    font-family: 'Exo 2';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 100%;
+    color: #FFFFFF;
+    text-align: left;
+}
+
+.main-content-frame-bottom-card-task-subtitle{
+    font-family: 'Exo 2';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 100%;
+    color: rgba(255, 255, 255, 0.5);
+    margin-top: 6px;
+}
+
+.main-content-frame-bottom-card-task-deadline{
+    font-family: 'Exo 2';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 100%;
+    color: rgba(255, 255, 255, 0.5);
+    margin-top: 22px;
+}
+
+.main-content-frame-bottom-card-task-deadline-bar-to-do{
+    width: 100%;
+    height: 4px;
+    border-radius: 2px;
+    margin-top: 10px;
+    background: #FFA048;
+}
+
+.main-content-frame-bottom-card-task-deadline-bar-expired{
+    width: 100%;
+    height: 4px;
+    border-radius: 2px;
+    margin-top: 10px;
+    background: #ff0000;
+}
+
+.main-content-frame-bottom-card-task-deadline-bar-done{
+    width: 100%;
+    height: 4px;
+    border-radius: 2px;
+    margin-top: 10px;
+    background: #00ff5199;
+}
+
+
+.main-content-frame-bottom-card-task-bottom{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.main-content-frame-bottom-card-task-bottom-expire-date{
+    background: rgba(255, 255, 255, 0.06);
+    border-radius: 17px;
+    font-family: 'Exo 2';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 100%;
+    color: #989CAA;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-left: 16px;
+    padding-right: 16px;
+}
+
+.main-content-frame-bottom-card-task-bottom-buttons{
+    display: flex;
+    align-items: center;
+}
+
+.main-content-frame-bottom-card-task-bottom-button{
+    margin-left: 12px;
+    width: 27px;
+    height: 27px;
+}
+
+.main-content-frame-bottom-card-task-bottom-button:hover{
+    filter: brightness(0) invert(1);
+    cursor: pointer;
+}
