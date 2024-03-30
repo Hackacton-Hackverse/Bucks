@@ -20,8 +20,7 @@ function clickCompleteTask(task_id, element){
             return response.json();
         })
         .then(data => {
-            contentt = element.parentNode.parentNode.parentNode.content;
-            content.innerHTML += contentt
+            content.innerHTML += element.parentNode.parentNode.parentNode.cloneNode(true).outerHTML;
             element.parentNode.parentNode.parentNode.remove();
         })
         .catch(error => {
