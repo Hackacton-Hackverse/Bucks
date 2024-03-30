@@ -96,13 +96,17 @@ def add_task():
             sql_req = """INSERT INTO Tasks (title, subtitle, comments, due_date, completed, user_id) VALUES (%s, %s, %s, %s, %s, %s);"""
             values = (title, subtitle, comments, due_date, 0, user_id)
             
+            task_id = 0
             try:
                 cursor.execute(sql_req, values)
+                conn.commit()   
             except Exception as e:
                 abort(500, f'error when creating task with on from user with id {user_id}, arborting.')
 
-            conn.commit()
-            return {'response': 'success'}
+            cursor.execute("SELECT task_id FROM Tasks WHERE task_id = (SELECT MAX(task_id) FROM Tasks);")
+            task_id = cursor.fetchall()
+            conn.commit()   
+            return {'task_id': task_id[0][0]}
 
 
 @app.route('/delete-task', methods=["POST"])
