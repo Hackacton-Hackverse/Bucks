@@ -22,7 +22,19 @@ INSERT INTO users (email, password) VALUES ('gg@gg.com', '12345');
 - Modify the `DATABASE_NAME` and `DATABASE_PASSWORD` variables with the appropriate values for your MySQL database connection.
 - Save the changes.
 
-### 3. Start the Backend
+### 3. Install Python Requirements
+
+- Open a terminal or command prompt.
+- Navigate to the root directory of the project.
+- Run the following command to install the required Python packages:
+
+```bash
+pip install FLASK
+pip install pymysql
+pip install flask_cors
+```
+
+### 4. Start the Backend
 
 - Open a terminal or command prompt.
 - Navigate to the `backend` directory.
@@ -32,7 +44,7 @@ INSERT INTO users (email, password) VALUES ('gg@gg.com', '12345');
 python main.py
 ```
 
-### 4. Start the Frontend
+### 5. Start the Frontend
 
 - Open the `frontend/app.html` file in your web browser.
 
