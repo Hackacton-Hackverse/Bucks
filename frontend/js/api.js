@@ -188,6 +188,17 @@ function listDoneTasks() {
         });
 }
 
-listToDoTasks();
-listDoneTasks();
-// listExpiredTasks();
+
+listToDoTasks()
+    .then(() => {
+        listDoneTasks()
+        .then(() => {
+            listExpiredTasks();
+        })
+        .catch(error => {
+            console.error('Error:', error);
+        });
+    })
+    .catch(error => {
+        console.error('Error:', error);
+    });
