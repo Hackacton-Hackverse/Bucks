@@ -1,4 +1,4 @@
-function clickCompleteTask(task_id){
+function clickCompleteTask(task_id, element){
     var content  = document.getElementById("main-content-frame-bottom-card-3");
 
     const postData = {
@@ -20,20 +20,9 @@ function clickCompleteTask(task_id){
             return response.json();
         })
         .then(data => {
-            content.innerHTML += 
-            `<div class="main-content-frame-bottom-card-task">
-                <div class="main-content-frame-bottom-card-task-title">`+task.title+`</div>
-                <div class="main-content-frame-bottom-card-task-subtitle">`+task.subtitle+`</div>
-                <div style="display:none;" id="taskid">`+task.task_id+`</div>
-                <div class="main-content-frame-bottom-card-task-deadline">Deadline</div>
-                <div class="main-content-frame-bottom-card-task-deadline-bar-to-do"></div>
-                <div class="main-content-frame-bottom-card-task-bottom">
-                    <div class="main-content-frame-bottom-card-task-bottom-expire-date">`+task.due_date+`</div>
-                    <div class="main-content-frame-bottom-card-task-bottom-buttons">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/8/8f/Flat_cross_icon.svg" class="main-content-frame-bottom-card-task-bottom-button">
-                    </div>
-                </div>
-            </div>`;
+            contentt = element.parentNode.parentNode.parentNode.content;
+            content.innerHTML += contentt
+            element.parentNode.parentNode.parentNode.remove();
         })
         .catch(error => {
             console.error('There was a problem with the fetch operation:', error);
@@ -107,7 +96,7 @@ function createTask(event) {
                 <div class="main-content-frame-bottom-card-task-bottom">
                     <div class="main-content-frame-bottom-card-task-bottom-expire-date">`+document.querySelector('input[type="datetime-local"]').value+`</div>
                     <div class="main-content-frame-bottom-card-task-bottom-buttons">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/3/3b/Eo_circle_green_checkmark.svg" class="main-content-frame-bottom-card-task-bottom-button" onclick="clickCompleteTask(this)">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/3/3b/Eo_circle_green_checkmark.svg" class="main-content-frame-bottom-card-task-bottom-button" onclick="clickCompleteTask(`+data.task_id+`, this)">
                         <img src="https://upload.wikimedia.org/wikipedia/commons/8/8f/Flat_cross_icon.svg" class="main-content-frame-bottom-card-task-bottom-button" onclick="clickDeleteTask(`+data.task_id+`, this)">
                     </div>
                 </div>
